@@ -1,0 +1,25 @@
+{
+   "name": "Stud.io to Pick a Brick",
+   "description": "Add bricks from your Stud.io model to your Lego Pick a Brick order.",
+   "version": "1.0",
+   "manifest_version": 3,
+   "action": {
+       "default_popup": "index.html",
+       "default_title": "Stud.io to Pick a Brick"
+   },
+   "permissions": [
+    "activeTab",
+    "cookies"
+  ],
+   "icons": {
+       "16": "icon.png",
+       "48": "icon.png",
+       "128": "icon.png"
+   },
+   "content_scripts": [
+    {
+        "matches": ["http://*/*", "https://*/*"],
+        "js": ["./static/js/content.js"]
+    }
+ ]
+}
